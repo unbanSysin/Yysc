@@ -1,0 +1,64 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.neenbedankt.android-apt'
+
+android {
+    compileSdkVersion rootProject.ext.android.compileSdkVersion
+    buildToolsVersion rootProject.ext.android.buildToolsVersion
+    defaultConfig {
+//        applicationId "com.yysc.exa"
+        minSdkVersion rootProject.ext.android.minSdkVersion
+        targetSdkVersion rootProject.ext.android.targetSdkVersion
+        versionCode rootProject.ext.android.versionCode
+        versionName rootProject.ext.android.versionName
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+//            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    packagingOptions {
+        exclude 'LICENSE.txt'
+    }
+
+    configurations.all {
+        resolutionStrategy.force 'com.android.support:support-annotations:23.0.1'
+    }
+
+
+    dataBinding{
+        enabled = true
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile 'com.android.support:appcompat-v7:25.3.1'
+    testCompile 'junit:junit:4.12'
+    if(!rootProject.ext.isRunAlone) {
+        compile project(':login')
+    }else {
+        compile project(':commonLibs')
+    }
+    //Espresso测试相关
+    androidTestCompile 'com.android.support.test:runner:0.5'
+    androidTestCompile 'com.android.support.test:rules:0.5'
+    androidTestCompile 'com.android.support.test.espresso:espresso-core:2.2.2'
+    androidTestCompile('com.android.support.test.espresso:espresso-contrib:2.2.2') {
+        exclude module: 'support-annotations'
+        exclude module: 'design'
+        exclude module: 'recyclerview-v7'
+        exclude module: 'support-v4'
+    }
+    androidTestCompile ('com.android.support.test.espresso:espresso-idling-resource:2.2.2') {
+        exclude module: 'support-annotations'
+    }
+    compile 'com.android.support:design:25.1.1'
+    apt rootProject.ext.dependencies.dagger_compiler
+
+}

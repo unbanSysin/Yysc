@@ -1,0 +1,54 @@
+ext {
+    isRunAlone = true;//fasle是libs  true是application
+
+    android = [
+            compileSdkVersion: 25,
+            buildToolsVersion: "25.0.3",
+            minSdkVersion    : 15,
+            targetSdkVersion : 24,
+            versionCode      : 1,
+            versionName      : "1.0",
+    ]
+
+    libsVersion = [
+            // App dependencies version
+            support_appcompat = "23.1.1",
+            junit = "4.12",
+            retrofit2 = "2.0.2",
+            rxjava = "2.0.2",
+            rxjava_android = "1.0.1",
+            gson = "2.0.2",
+            reactivex = "x.y.z",
+            logging_interceptor = "3.4.1",
+            dagger2 = "2.4",
+            java_annotation = "10.0-b28",
+            lifecycle_runtime = "1.0.0-alpha1",
+            lifecycle_extensions = "1.0.0-alpha1",
+            dagger_compiler = "2.4",
+            lifecycle_compiler = "1.0.0-alpha1",
+            tinker_lib = "1.9.2",
+            tinker_anno = "1.9.2",
+            tinker_multidex = "1.0.1",
+    ]
+
+    dependencies = [
+            junit               : "junit:junit:$rootProject.junit",
+            support_appcompat   : "com.android.support:appcompat-v7:$rootProject.support_appcompat",
+            retrofit2           : "com.squareup.retrofit2:retrofit:$rootProject.retrofit2",
+            rxjava              : "com.squareup.retrofit2:adapter-rxjava:$rootProject.rxjava",
+            gson                : "com.squareup.retrofit2:converter-gson:$rootProject.gson",
+            reactivex           : "io.reactivex:rxjava:$rootProject.reactivex",
+            rxandroid           : "io.reactivex:rxandroid:$rootProject.rxjava_android",
+            logging_interceptor : "com.squareup.okhttp3:logging-interceptor:$rootProject.logging_interceptor",
+            dragger2            : "com.google.dagger:dagger:$rootProject.dagger2",
+            dagger_compiler     : "com.google.dagger:dagger-compiler:$rootProject.dagger_compiler",
+            java_annotation     : "org.glassfish:javax.annotation:$rootProject.java_annotation",
+            lifecycle_runtime   : "android.arch.lifecycle:runtime:$rootProject.lifecycle_runtime",
+            lifecycle_extensions: "android.arch.lifecycle:extensions:$rootProject.lifecycle_extensions",
+            lifecycle_compiler  : "android.arch.lifecycle:compiler:$rootProject.lifecycle_compiler",
+            tinker_lib          : "com.tencent.tinker:tinker-android-lib:$rootProject.tinker_lib",
+            tinker_anno         : "com.tencent.tinker:tinker-android-anno:$rootProject.tinker_anno",
+            tinker_multidex     : "com.android.support:multidex:$rootProject.tinker_multidex",
+    ]
+
+}

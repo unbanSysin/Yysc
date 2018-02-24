@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+
+
+    <!-- 主背景色 -->
+    <color name="Color_BG">#F0F9FE</color>
+    <!-- 分割线 -->
+    <color name="Color_LINE">#DDECFA</color>
+    <!-- 主蓝色 -->
+    <color name="Color_MAIN_BLUE">#0099D9</color>
+    <!-- 重黑 -->
+    <color name="Color_MAIN_DEEPBLACK">#333333</color>
+    <!-- 次黑 -->
+    <color name="Color_MAIN_BLACK">#666666</color>
+    <!-- 辅黑 -->
+    <color name="Color_MAIN_LIGHTBLACK">#999999</color>
+    <!-- 橘色 -->
+    <color name="Color_MAIN_ORANGE">#FE7F0F</color>
+    <!-- 红色 -->
+    <color name="Color_MAIN_RED">#FF5656</color>
+    <!-- 绿色 -->
+    <color name="Color_MAIN_GREEN">#C3D82D</color>
+    <!-- 进度蓝色 -->
+    <color name="Color_MAIN_PROGRESS_BLUE">#C0DFEC</color>
+    <!-- 白色 -->
+    <color name="Color_Background_White">#ffffff</color>
+    <!-- 淡黄色 -->
+    <color name="Color_Font_LightYellow">#F8CC38</color>
+    <!-- 淡绿色 -->
+    <color name="Color_MAIN_LIGHT_GREEN">#34d66e</color>
+
+    <!-- 深黄色 -->
+    <color name="Color_Font_DeepYellow">#FFB026</color>
+</resources>
